@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shareBalance"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cuttlesystems.cuttlewallet.ShareBalanceActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crypto_card">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Address" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Address" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Address" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/shareLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center|clip_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADD ASSET"
+            android:textAlignment="center"
+            android:textColor="@color/blacknotblack"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/closeShare"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:clickable="true"
+            android:onClick="closeShareSlot" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/crypto_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/blacknotblack"
+        android:backgroundTintMode="multiply"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shareLayoutTop">
+
+        <ImageView
+            android:id="@+id/IconCoinShare"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_weight="0"
+            tools:srcCompat="@drawable/doge_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/NameBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CryptoName"
+                android:textColor="@color/apricot"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ValueBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MoneyInThisWallet"
+                android:textColor="@color/apricot"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:paddingTop="10dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Space
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+                <LinearLayout
+                    android:id="@+id/send_tank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="startSendingCoinActivity"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/send_button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="0"
+                        android:background="#00FFFFFF"
+                        android:clickable="true"
+                        android:onClick="startSendingCoinActivity"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/send_icon" />
+
+                    <TextView
+                        android:id="@+id/send_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="startSendingCoinActivity"
+                        android:text="Send"
+                        android:textColor="@color/apricot" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/address_table_widget"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layoutMode="clipBounds"
+        app:flow_horizontalAlign="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_wrapBehaviorInParent="horizontal_only" />
+
+
+    <TextView
+        android:id="@+id/loading_addresses_share_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

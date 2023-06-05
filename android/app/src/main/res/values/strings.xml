@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CuttleWallet</string>
+    <string name="title_activity_wallet">WalletActivity</string>
+    <string name="title_activity_balances">BalancesActivity</string>
+    <string name="title_activity_balance">ShareBalanceActivity</string>
+    <string name="title_home">Wallet</string>
+    <string name="title_dashboard">Swap</string>
+    <string name="title_notifications">Support</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="add_asset">ADD ASSET +</string>
+    <string name="balance">Balance</string>
+    <string name="cuttle_wallet">Cuttle Wallet</string>
+</resources>
